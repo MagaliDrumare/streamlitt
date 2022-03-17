@@ -54,8 +54,8 @@ st.write(
 
 st.subheader("🖼️ Image")
 st.write(f"Here's what view *{view_name}* looks like:")
-st.image(view_image, width=300)
+st.image(view_image, width=600)
 
-st.subheader("📊 Data")
-st.write(f"And here's the data for view *{view_name}*:")
-st.write(pd.read_csv(StringIO(view_csv)))
+#st.subheader("📊 Data")
+#st.write(f"And here's the data for view *{view_name}*:")
+#st.write(pd.read_csv(StringIO(view_csv)))
