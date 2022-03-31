@@ -25,11 +25,11 @@ def run_query():
         workbooks_names = [w.name for w in workbooks]
 
         # Get views for first workbook.
-        server.workbooks.populate_views(workbooks[4])
-        views_names = [v.name for v in workbooks[4].views]
+        server.workbooks.populate_views(workbooks[5])
+        views_names = [v.name for v in workbooks[5].views]
 
         # Get image & CSV for first view of first workbook.
-        view_item = workbooks[4].views[1]
+        view_item = workbooks[5].views[1]
         server.views.populate_image(view_item)
         server.views.populate_csv(view_item)
         view_name = view_item.name
