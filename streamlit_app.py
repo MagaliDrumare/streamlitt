@@ -48,7 +48,7 @@ st.write("Found the following workbooks:", ", ".join(workbooks_names))
 
 st.subheader("👁️ Views")
 st.write(
-    f"Workbook *{workbooks_names['Customer segmentation dashboard']}* has the following views:",
+    f"Workbook *{workbooks_names[0]}* has the following views:",
     ", ".join(views_names),
 )
 
