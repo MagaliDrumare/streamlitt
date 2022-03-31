@@ -21,15 +21,15 @@ def run_query():
     with server.auth.sign_in(tableau_auth):
 
         # Get all workbooks.
-        workbooks, pagination_item = server.workbooks.get(190047)
+        workbooks, pagination_item = server.workbooks.get()
         workbooks_names = [w.name for w in workbooks]
 
         # Get views for first workbook.
-        server.workbooks.populate_views(workbooks[573923])
-        views_names = [v.name for v in workbooks[573923].views]
+        server.workbooks.populate_views(workbooks[13])
+        views_names = [v.name for v in workbooks[13].views]
 
         # Get image & CSV for first view of first workbook.
-        view_item = workbooks[573923].views[0]
+        view_item = workbooks[13].views[0]
         server.views.populate_image(view_item)
         server.views.populate_csv(view_item)
         view_name = view_item.name
