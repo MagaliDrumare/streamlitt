@@ -21,7 +21,7 @@ def run_query():
     with server.auth.sign_in(tableau_auth):
 
         # Get all workbooks.
-        workbooks, pagination_item = server.workbooks.get()
+        workbooks, pagination_item = server.workbooks.get(190047)
         workbooks_names = [w.name for w in workbooks]
 
         # Get views for first workbook.
