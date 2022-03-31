@@ -25,18 +25,18 @@ def run_query():
         workbooks_names = [w.name for w in workbooks]
 
         # Get views for first workbook.
-        server.workbooks.populate_views(workbooks[3])
-        views_names = [v.name for v in workbooks[3].views]
+        server.workbooks.populate_views(workbooks[4])
+        views_names = [v.name for v in workbooks[4].views]
 
         # Get image & CSV for first view of first workbook.
-        view_item = workbooks[3].views[1]
+        view_item = workbooks[4].views[1]
         server.views.populate_image(view_item)
         server.views.populate_csv(view_item)
         view_name = view_item.name
         view_image = view_item.image
         # `view_item.csv` is a list of binary objects, convert to str.
         view_csv = b"".join(view_item.csv).decode("utf-8")
-
+        
         return workbooks_names, views_names, view_name, view_image, view_csv
 
 workbooks_names, views_names, view_name, view_image, view_csv = run_query()
